@@ -184,4 +184,16 @@
 			</table>
 		</div>
 	</body>
+	<script src="https://github.com/eKoopmans/html2pdf/blob/master/dist/html2pdf.bundle.min.js"></script>
+
+    <script>
+      function generatePDF() {
+        // Choose the element that our invoice is rendered in.
+        const element = document.getElementById("invoice");
+        // Choose the element and save the PDF for our user.
+        html2pdf()
+          .from(element)
+          .save();
+      }
+    </script>
 </html>
